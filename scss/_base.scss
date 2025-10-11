@@ -1,0 +1,50 @@
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+* ::after,
+::before {
+    box-sizing: border-box;
+}
+
+body {
+    color: var(--color-brand-dark);
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 173%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 700;
+    font-size: 64px;
+    margin-bottom: 80px;
+    line-height: normal;
+}
+
+a {
+    display: inline-block;
+}
+
+p {
+    margin-top: 0;
+    display: block;
+}
+
+section {
+    padding-top: 96px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
