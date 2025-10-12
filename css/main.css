@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* roboto-100 - latin */
 @font-face {
   font-display: swap;
@@ -222,6 +223,7 @@ body {
   font-weight: 400;
   font-size: 22px;
   line-height: 173%;
+  margin: 0;
 }
 
 h1,
@@ -277,8 +279,13 @@ section {
 
 /*header*/
 .header {
+  position: absolute;
+  top: 0;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  width: 100%;
   -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
   background: rgba(255, 255, 255, 0.25);
 }
 
@@ -322,9 +329,18 @@ section {
 }
 
 /*hero-sectoon*/
+.hero-container {
+  padding-top: 17px;
+  display: flex;
+  align-items: center;
+}
+
 .hero-section {
-  padding: 165px;
-  background-image: linear-gradient(94deg, #fff 9.65%, rgba(255, 255, 255, 0.85) 26.08%, rgba(255, 255, 255, 0.19) 52.74%, rgba(255, 255, 255, 0) 74.46%), url(../images2/women\ 2.png);
+  display: flex;
+  align-items: center;
+  padding-bottom: 165px;
+  background-image: linear-gradient(94deg, #fff 9.65%, rgba(255, 255, 255, 0.85) 26.08%, rgba(255, 255, 255, 0.19) 52.74%, rgba(255, 255, 255, 0) 74.46%), url(../images2/фон.png);
+  height: 688px;
   background-repeat: no-repeat;
   background-position: center top;
   background-size: cover;
@@ -338,6 +354,10 @@ section {
 .call-and-get {
   font-size: 12px;
   line-height: 150%;
+}
+
+.hero-text {
+  margin-left: 106px;
 }
 
 .hero-title {
@@ -404,8 +424,9 @@ section {
 
 /*why us section*/
 .why-us-section {
-  padding-bottom: 150px;
   background-image: url(../images2/background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .why-us-container {
@@ -440,10 +461,11 @@ section {
   box-shadow: 0 4px 4px 0 rgba(168, 198, 245, 0.38);
   background-color: var(--color-brand-white);
   text-align: center;
-  padding-top: 24px;
-  padding-bottom: 24px;
   padding-left: 32px;
   padding-right: 32px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  height: 181px;
 }
 
 /*procedures section*/
@@ -550,7 +572,7 @@ section {
 .map {
   border-radius: 32px;
   width: 605px;
-  min-height: 482px;
+  height: 482px;
 }
 
 .where {
@@ -593,6 +615,7 @@ section {
   font-size: 16px;
   color: var(--color-brand-white);
   text-decoration: none;
+  font-style: normal;
 }
 
 .address-logos {
@@ -607,6 +630,7 @@ section {
   cursor: pointer;
   font-weight: 400;
   font-size: 16px;
+  text-decoration: none;
 }
 
 .politics {
@@ -688,6 +712,7 @@ section {
 
 /*Form*/
 .form-tittle {
+  margin-top: 0;
   font-weight: 600;
   font-size: 22px;
   text-align: center;
@@ -705,6 +730,7 @@ section {
   border-radius: 32px;
   background-color: var(--color-brand-dark);
   color: var(--color-brand-white);
+  max-height: 482px;
   width: 423px;
   padding: 48px;
 }
@@ -763,7 +789,7 @@ section {
   line-height: 146%;
   text-align: center;
   color: var(--color-secondary-light);
-  padding-top: 24px;
+  margin-bottom: 0;
 }
 
 .useless-link {
@@ -780,4 +806,6 @@ section {
 .moodal-div {
   justify-content: center;
   align-items: center;
-}/*# sourceMappingURL=main.css.map */
+}
+
+/*# sourceMappingURL=main.css.map */

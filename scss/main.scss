@@ -225,7 +225,57 @@
     --color-secondary-light: #747272;
 }
 
-@import './base';
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+* ::after,
+::before {
+    box-sizing: border-box;
+}
+
+body {
+    color: var(--color-brand-dark);
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 173%;
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 700;
+    font-size: 64px;
+    margin-bottom: 80px;
+    line-height: normal;
+}
+
+a {
+    display: inline-block;
+}
+
+p {
+    margin-top: 0;
+    display: block;
+}
+
+section {
+    padding-top: 96px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
 
 /*Button*/
 .button {
@@ -248,6 +298,12 @@
 
 /*header*/
 .header {
+    position: absolute;
+    top: 0;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    width: 100%;
+    -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     background: rgba(255, 255, 255, 0.25);
 }
@@ -256,7 +312,7 @@
     display: flex;
     align-items: center;
     top: 0;
-    gap: 240px;
+   gap: 240px;
 }
 
 .address-logos.header {
@@ -292,14 +348,18 @@
 }
 
 /*hero-sectoon*/
+.hero-container{ 
+    padding-top: 17px;
+display: flex;
+align-items: center;
+
+}
 .hero-section {
-    padding: 165px;
-    background-image: linear-gradient(94deg,
-            #fff 9.65%,
-            rgba(255, 255, 255, 0.85) 26.08%,
-            rgba(255, 255, 255, 0.19) 52.74%,
-            rgba(255, 255, 255, 0) 74.46%),
-        url(../images2/women\ 2.png);
+    display: flex;
+    align-items: center;
+    padding-bottom: 165px;
+    background-image: linear-gradient(94deg, #fff 9.65%, rgba(255, 255, 255, 0.85) 26.08%, rgba(255, 255, 255, 0.19) 52.74%, rgba(255, 255, 255, 0) 74.46%), url(../images2/фон.png);
+    height: 688px;
     background-repeat: no-repeat;
     background-position: center top;
     background-size: cover;
@@ -314,6 +374,8 @@
     font-size: 12px;
     line-height: 150%;
 }
+.hero-text {
+margin-left: 106px;}
 
 .hero-title {
     color: var(--color-brand-light);
@@ -372,14 +434,16 @@
     border-radius: 360px;
     box-shadow: 0 4px 4px 0 rgba(168, 198, 245, 0.2);
 }
-.about-us-images.after{
+
+.about-us-images.after {
     margin-left: 169px;
 }
 
 /*why us section*/
 .why-us-section {
-    padding-bottom: 150px;
     background-image: url(../images2/background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .why-us-container {
@@ -414,10 +478,11 @@
     box-shadow: 0 4px 4px 0 rgba(168, 198, 245, 0.38);
     background-color: var(--color-brand-white);
     text-align: center;
-    padding-top: 24px;
-    padding-bottom: 24px;
     padding-left: 32px;
     padding-right: 32px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    height: 181px;
 }
 
 /*procedures section*/
@@ -434,11 +499,7 @@
 }
 
 .procedures-card-1 {
-    background-image: linear-gradient(180deg,
-            rgba(1, 28, 68, 0) 47.4%,
-            rgba(1, 28, 68, 0.73) 82.66%,
-            #011c44 99.06%),
-        url(../images2/3.png);
+    background-image: linear-gradient(180deg, rgba(1, 28, 68, 0) 47.4%, rgba(1, 28, 68, 0.73) 82.66%, #011c44 99.06%), url(../images2/3.png);
     text-align: center;
     border: 2px solid var(--color-brand-white);
     border-radius: 120px 4px;
@@ -448,11 +509,7 @@
 }
 
 .procedures-card-2 {
-    background-image: linear-gradient(180deg,
-            rgba(1, 28, 68, 0) 47.4%,
-            rgba(1, 28, 68, 0.73) 82.66%,
-            #011c44 99.06%),
-        url(../images2/4.png);
+    background-image: linear-gradient(180deg, rgba(1, 28, 68, 0) 47.4%, rgba(1, 28, 68, 0.73) 82.66%, #011c44 99.06%), url(../images2/4.png);
     text-align: center;
     border: 2px solid var(--color-brand-white);
     border-radius: 120px 4px;
@@ -462,11 +519,7 @@
 }
 
 .procedures-card-3 {
-    background-image: linear-gradient(180deg,
-            rgba(1, 28, 68, 0) 47.4%,
-            rgba(1, 28, 68, 0.73) 82.66%,
-            #011c44 99.06%),
-        url(../images2/5.png);
+    background-image: linear-gradient(180deg, rgba(1, 28, 68, 0) 47.4%, rgba(1, 28, 68, 0.73) 82.66%, #011c44 99.06%), url(../images2/5.png);
     text-align: center;
     border: 2px solid var(--color-brand-white);
     border-radius: 120px 4px;
@@ -482,7 +535,7 @@
 }
 
 .procedures-item {
-    flex-basis: (100%)/3;
+    flex-basis: 33.3333333333%;
     padding: 77px;
 }
 
@@ -493,7 +546,6 @@
     line-height: 118%;
     text-align: center;
     margin-top: 390px;
-    
 }
 
 .procedures {
@@ -537,13 +589,12 @@
 .map {
     border-radius: 32px;
     width: 605px;
-    min-height: 482px;
+    height: 482px;
 }
 
 .where {
     color: var(--color-brand-light);
 }
-
 
 /*footer*/
 .footer {
@@ -581,7 +632,9 @@
     font-size: 16px;
     color: var(--color-brand-white);
     text-decoration: none;
+    font-style: normal;
 }
+
 
 .address-logos {
     display: flex;
@@ -595,6 +648,7 @@
     cursor: pointer;
     font-weight: 400;
     font-size: 16px;
+    text-decoration: none;
 }
 
 .politics {
@@ -676,6 +730,7 @@
 
 /*Form*/
 .form-tittle {
+margin-top: 0;
     font-weight: 600;
     font-size: 22px;
     text-align: center;
@@ -685,17 +740,20 @@
 .form {
     background-image: url(../images2/form-back.png);
 }
-.form{
+
+.form {
     display: block;
     text-align: center;
     border: 2px solid var(--color-brand-dark);
-        border-radius: 32px;
-        background-color: var(--color-brand-dark);
-        color: var(--color-brand-white);
-        width: 423px;
-        padding: 48px;
+    border-radius: 32px;
+    background-color: var(--color-brand-dark);
+    color: var(--color-brand-white);
+    max-height: 482px;
+    width: 423px;
+    padding: 48px;
 }
-.modal-form-tittle{
+
+.modal-form-tittle {
     font-style: 64px;
     font-weight: 700;
     margin-bottom: 40px;
@@ -749,7 +807,7 @@
     line-height: 146%;
     text-align: center;
     color: var(--color-secondary-light);
-    padding-top: 24px;
+   margin-bottom: 0; 
 }
 
 .useless-link {
@@ -767,3 +825,5 @@
     justify-content: center;
     align-items: center;
 }
+
+/*# sourceMappingURL=main.css.map */
